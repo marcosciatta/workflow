@@ -82,9 +82,7 @@ final class Definition
 
     private function addPlace(string $place)
     {
-        if (!preg_match('{^[\w_-]+$}', $place)) {
-            throw new InvalidArgumentException(sprintf('The place "%s" contains invalid characters.', $place));
-        }
+        
 
         if (!count($this->places)) {
             $this->initialPlace = $place;
